@@ -1,0 +1,15 @@
+<table>
+    <thead>
+      <tr>
+        <th>Employee Name</th>
+        <th>Total Hours Worked</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employeeHours"  [ngClass]="{'highlight' : employee.TotalHours<100}">
+        <td>{{ employee.EmployeeName }}</td>
+        <td>{{ employee.TotalHours | number:'1.0-2' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
